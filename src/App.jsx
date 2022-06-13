@@ -9,11 +9,20 @@ function App() {
 
   useEffect(() => {
     getBeers().then(items => setBeersArray(items))
+    console.log("api call");
   }, []);
 
   const getBeers = async () => {
-    const data = await fetch("https://api.punkapi.com/v2/beers?page=1");
-    return await data.json();
+    let fetchResult = [0];
+    let pageNumber = 1;
+    let results = [];
+    while (fetchResult.length > 0) {
+      let request = await fetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=80`);
+      fetchResult = await request.json();
+      results.push(...fetchResult);
+      pageNumber++;
+    }
+    return results;
   };
 
   return (

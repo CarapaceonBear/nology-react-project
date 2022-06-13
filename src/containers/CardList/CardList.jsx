@@ -7,7 +7,11 @@ const CardList = ({beersArray}) => {
   return (
     <div className="card-list">
       {(beersArray || []).map((beer, index) => {
-        return <Card key={"beer " + index} beer={beer} hidden={false} />
+        if (index >= 25) {
+          return <Card key={"beer " + index} beer={beer} hidden={true} />
+        } else {
+          return <Card key={"beer " + index} beer={beer} hidden={false} />
+        }
       })}
 
     </div>

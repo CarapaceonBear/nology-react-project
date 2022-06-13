@@ -5,6 +5,11 @@ const Card = ({beer, hidden}) => {
 
   const {name, image_url, tagline,} = beer
 
+  let hiddenClass = "card";
+  if (hidden) {
+    hiddenClass = "card hidden"
+  };
+
   let nameClass = "card__name";
   if (name.length >= 18) {
     nameClass = "card__name--small"
@@ -15,7 +20,7 @@ const Card = ({beer, hidden}) => {
   };
 
   return (
-    <div className="card" >
+    <div className={hiddenClass} >
       <h2 className={nameClass} >{name}</h2>
       <img className="card__image" src={image_url} alt={name} />
       <p className={taglineClass}>{tagline}</p>
