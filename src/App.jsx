@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import './App.scss';
 import Main from "../src/containers/Main/Main";
+import NavBar from "../src/containers/NavBar/NavBar";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <div className="App">
+      <NavBar />
       <Main beersArray={beersArray} />
     </div>
   );

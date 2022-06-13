@@ -4,10 +4,11 @@ import Card from "../../components/Card/Card";
 
 const CardList = ({beersArray}) => {
 
-  console.log(beersArray);
-
   return (
     <div className="card-list">
+      {(beersArray || []).map((beer, index) => {
+        return <Card key={"beer " + index} beer={beer} hidden={false} />
+      })}
 
     </div>
   )
