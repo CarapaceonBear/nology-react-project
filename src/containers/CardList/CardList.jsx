@@ -1,8 +1,15 @@
 import React from 'react';
+import "./CardList.scss";
+import Card from "../../components/Card/Card";
 
-const CardList = () => {
+const CardList = ({beersArray}) => {
+
+  console.log(beersArray);
+
   return (
-    <div className="card-list">CardList</div>
+    <div className="card-list">
+
+    </div>
   )
 }
 

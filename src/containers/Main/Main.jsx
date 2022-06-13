@@ -1,8 +1,13 @@
 import React from 'react';
+import "./Main.scss";
+import CardList from '../CardList/CardList';
 
-const Main = () => {
+const Main = ({beersArray}) => {
+
   return (
-    <div className="main">Main</div>
+    <div className="main">
+      <CardList beersArray={beersArray} />
+    </div>
   )
 }
 
