@@ -9,17 +9,16 @@ Have a single page with cards of the beers.<br>
 Have a sidebar for searching and filtering the results.<br>
 
 ### Component Tree
-
-App<br>
- |¬ Main<br>
- | L¬ CardList<br>
- |   L Card<br>
- |<br>
- L¬ NavBar<br>
-   |- SearchBox<br>
-   L¬ FiltersList<br>
-     L FilterItem<br>
-<br>
+<pre>
+App
+ |- Main
+ |   L CardList
+ |       L Card
+ L NavBar
+     |- SearchBox
+     L- FiltersList
+          L FilterItem
+</pre>
 The data is retrieved as an array of objects from the API.<br>
 Data is passed to NavBar, which passes it to the search and filter components.<br>
 The filtered data is returned up to App, then passed down through to CardList.<br>
