@@ -1,8 +1,15 @@
 import React from 'react';
+import "./NavBar.scss";
+import SearchBox from "../../components/SearchBox/SearchBox";
+import FilterList from "../../containers/FiltersList/FiltersList";
 
-const NavBar = () => {
+const NavBar = ({handleFilter, title}) => {
+
   return (
-    <div className="nav-bar">NavBar</div>
+    <div className="nav-bar">
+      <SearchBox />
+      <FilterList handleFilter={handleFilter}/>
+    </div>
   )
 }
 
