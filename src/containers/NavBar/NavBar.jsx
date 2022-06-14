@@ -7,8 +7,8 @@ const NavBar = ({handleFilter, title}) => {
 
   return (
     <div className="nav-bar">
-      <SearchBox />
-      <FilterList handleFilter={handleFilter}/>
+      <SearchBox className="nav-bar__search" />
+      <FilterList className="nav-bar__filter" handleFilter={handleFilter}/>
     </div>
   )
 }
