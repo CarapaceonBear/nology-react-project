@@ -11,6 +11,7 @@ function App() {
 
   useEffect(() => {
     console.log("api call");
+    console.log(trigger);
     getBeers(filters).then(items => setBeersArray(items))
   }, [trigger]);
 
@@ -50,17 +51,14 @@ function App() {
         returnArray = [false, false, false];
     }
     setFilters(returnArray);
-    console.log(filters);
     setTrigger(filters.toString());
   }
 
   return (
-    <>
-      <div className="App">
-        <NavBar handleFilter={handleFilter} />
-        <Main beersArray={beersArray} />
-      </div>
-    </>
+    <div className="App">
+      <NavBar handleFilter={handleFilter} />
+      <Main beersArray={beersArray} filterAcidic={filters[2]} />
+    </div>
   );
 }
 
