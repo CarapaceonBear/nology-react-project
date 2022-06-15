@@ -6,14 +6,41 @@ import NavBar from "../src/containers/NavBar/NavBar";
 function App() {
 
   const [beersArray, setBeersArray] = useState();
+  const [searchArray, setSearchArray] = useState();
   const [filters, setFilters] = useState([false, false, false]);
+  const [search, setSearch] = useState("");
   const [trigger, setTrigger] = useState("start")
 
   useEffect(() => {
     console.log("api call");
     console.log(trigger);
     getBeers(filters).then(items => setBeersArray(items))
-  }, [trigger]);
+    .then(setSearchArray(applySearch(search, beersArray)))
+  }, [trigger, search]);
+
+  // useEffect(() => {
+  //   console.log("apply search");
+  //   if (search !== "") {
+  //     setSearchArray(applySearch(search, beersArray))
+  //   } else {
+  //     console.log("empty search");
+  //     setSearchArray(beersArray);
+  //   }
+  // }, [search])
+
+  const applySearch = (searchTerm, array) => {
+    if (search !== "") {
+      console.log("apply search");
+      setSearchArray(applySearch(search, beersArray))
+      const postSearch = [...array].filter((beer) => {
+        return (beer.name.toLowerCase().includes(searchTerm.toLowerCase()))
+      });
+      return postSearch;
+    } else {
+      console.log("empty search");
+      return beersArray;
+    }
+  }
 
   const getBeers = async (filters) => {
     let fetchResult = [0];
@@ -54,10 +81,14 @@ function App() {
     setTrigger(filters.toString());
   }
 
+  const handleSearch = (event) => {
+    setSearch(event.target.value);
+  }
+
   return (
     <div className="App">
-      <NavBar handleFilter={handleFilter} />
-      <Main beersArray={beersArray} filterAcidic={filters[2]} />
+      <NavBar handleFilter={handleFilter} handleSearch={handleSearch} />
+      <Main beersArray={searchArray} filterAcidic={filters[2]} />
     </div>
   );
 }
