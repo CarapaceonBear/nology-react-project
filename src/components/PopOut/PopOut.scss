@@ -1,5 +1,17 @@
 @use "../../assets/scss/variables" as *;
 
+@keyframes jumpUp {
+    0% {
+        transform: translateY(100%);
+    }
+    65% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -19,6 +31,9 @@
     flex-direction: column;
     padding: 2rem;
     width: 800px;
+
+    animation: 0.4s cubic-bezier(0, -0.3, 1, 0.9) 0s 1 jumpUp;
+
 
     &__top {
         display: flex;
