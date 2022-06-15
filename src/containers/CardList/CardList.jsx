@@ -2,7 +2,7 @@ import React from 'react';
 import "./CardList.scss";
 import Card from "../../components/Card/Card";
 
-const CardList = ({beersArray, filterAcidic}) => {
+const CardList = ({beersArray, filterAcidic, searchTerm}) => {
 
   if (filterAcidic) {
     beersArray = beersArray.filter((beer) => {
@@ -10,9 +10,17 @@ const CardList = ({beersArray, filterAcidic}) => {
     })
   }
 
+  let search = beersArray;
+  if (searchTerm !== "") {
+    const searchResults = [...beersArray].filter((beer) => {
+      return (beer.name.toLowerCase().includes(searchTerm.toLowerCase()))
+    });
+    search = searchResults;
+  }
+
   return (
     <div className="card-list">
-      {(beersArray || []).map((beer, index) => {
+      {(search || []).map((beer, index) => {
         if (index >= 25) {
           return <Card key={"beer " + index} beer={beer} hidden={true} />
         } else {
