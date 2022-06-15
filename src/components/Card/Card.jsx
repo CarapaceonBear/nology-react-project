@@ -1,9 +1,9 @@
 import React from "react";
 import "./Card.scss";
 
-const Card = ({beer, hidden}) => {
+const Card = ({beer, hidden, onClick}) => {
 
-  const {name, image_url, tagline,} = beer
+  const {name, image_url, tagline} = beer
 
   let hiddenClass = "card";
   if (hidden) {
@@ -24,6 +24,7 @@ const Card = ({beer, hidden}) => {
       <h2 className={nameClass} >{name}</h2>
       <img className="card__image" src={image_url} alt={name} />
       <p className={taglineClass}>{tagline}</p>
+      <button className="card__button" type="button" name={name} onClick={onClick}></button>
     </div>
   )
 }
