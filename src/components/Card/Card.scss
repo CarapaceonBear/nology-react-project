@@ -5,6 +5,7 @@
     height: 450px;
     background-color: $card-color;
     border-radius: 1rem;
+    position: relative;
 
     &__name {
         height: 32px;
@@ -23,6 +24,22 @@
     &__tagline {
         &--small {
             font-size: 14px;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        width: 250px;
+        height: 450px;
+        bottom: 0;
+        right: 0;
+        border-radius: 1rem;
+        border: none;
+        background-color: #00000000;
+        transition: background-color 0.4s;
+
+        &:hover {
+            background-color: $hover-color;
         }
     }
 }
