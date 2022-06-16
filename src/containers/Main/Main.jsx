@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import "./Main.scss";
 import CardList from '../CardList/CardList';
 import PageNav from '../PageNav/PageNav';
+import logo from "../../assets/images/Brewdog_logo_2022.png";
 
 const Main = ({beersArray, filterAcidic, searchTerm}) => {
 
@@ -22,8 +23,9 @@ const Main = ({beersArray, filterAcidic, searchTerm}) => {
 
   return (
     <div className="main">
-      <CardList beersArray={beersArray} filterAcidic={filterAcidic} searchTerm={searchTerm} number={pageNumber} />
+      <img className="main__image" src={logo} alt="brewdog" />
       <PageNav number={pageNumber} buttonClick={buttonClick} />
+      <CardList beersArray={beersArray} filterAcidic={filterAcidic} searchTerm={searchTerm} number={pageNumber} />
     </div>
   )
 }

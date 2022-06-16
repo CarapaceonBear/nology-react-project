@@ -1,1 +1,11 @@
 @use "../../assets/scss/variables" as *;
+
+.search-box {
+    margin-top: 6rem;
+    font-size: 1.6rem;
+
+    &__input {
+        font-size: 1.2rem;
+        width: 90%;
+    }
+}

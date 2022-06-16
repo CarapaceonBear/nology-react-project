@@ -18,7 +18,7 @@
     left: 0;
     background-color: #000000ac;
     width: 100%;
-    height: 100%;
+    height: 200%;
 }
 
 .pop-out {
@@ -26,6 +26,7 @@
     top: 2rem;
     // left: ($nav-bar-width / 2);
     background-color: $card-color;
+    border-radius: 1rem;
 
     display: flex;
     flex-direction: column;

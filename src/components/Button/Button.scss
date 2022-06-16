@@ -1,1 +1,32 @@
 @use "../../assets/scss/variables" as *;
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $accent-color;
+    color: $background-color;
+    border: none;
+    border-radius: 5px;
+
+    height: 2rem;
+    width: 2rem;
+
+    font-family: $title-font;
+    font-weight: $title-weight;
+    font-size: 1.4rem;
+
+    padding-bottom: 5px;
+
+    transition: width 0.2s;
+
+    &:hover {
+        height: 2.2rem;
+        width: 2.2rem;
+    }
+    &:active {
+        background-color: $accent-color-shade;
+        transform: translateY(2px);
+    }
+}

@@ -6,7 +6,13 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 2rem;
-    margin-top: 4rem;
     padding: 1rem;
-    min-width: $nav-bar-width;
+    width: $nav-bar-width;
+    min-height: 100vh;
+
+    background-color: $splash-color;
+    color: $background-color;
+    font-family: $copy-font;
+    font-weight: $copy-weight-mid;
+    font-size: 1.2rem;
 }

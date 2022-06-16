@@ -2,10 +2,20 @@
 
 .card {
     width: 250px;
-    height: 450px;
+    height: 430px;
     background-color: $card-color;
     border-radius: 1rem;
     position: relative;
+
+    transition: height 0.2s, width 0.2s;
+    &:hover {
+        height: 435px;
+        width: 255px;
+    }
+    &:hover .card__button {
+        height: 435px;
+        width: 255px;
+    }
 
     &__name {
         height: 32px;
@@ -18,7 +28,8 @@
     }
 
     &__image {
-        max-height: 300px;
+        // margin-top: 1rem;
+        max-height: 280px;
     }
 
     &__tagline {
@@ -30,13 +41,13 @@
     &__button {
         position: absolute;
         width: 250px;
-        height: 450px;
+        height: 430px;
         bottom: 0;
         right: 0;
         border-radius: 1rem;
         border: none;
         background-color: #00000000;
-        transition: background-color 0.4s;
+        transition: height 0.2s, width 0.2s, background-color 0.4s;
 
         &:hover {
             background-color: $hover-color;
