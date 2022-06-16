@@ -3,9 +3,10 @@ import "./CardList.scss";
 import Card from "../../components/Card/Card";
 import PopOut from "../../components/PopOut/PopOut";
 
-const CardList = ({beersArray, filterAcidic, searchTerm}) => {
+const CardList = ({beersArray, filterAcidic, searchTerm, number}) => {
 
   const [selectedBeer, setSelectedBeer] = useState(null);
+  const perPage = 10;
 
   if (filterAcidic) {
     beersArray = beersArray.filter((beer) => {
@@ -35,7 +36,7 @@ const CardList = ({beersArray, filterAcidic, searchTerm}) => {
   return (
     <div className="card-list">
       {(search || []).map((beer, index) => {
-        if (index >= 25) {
+        if ((index >= (perPage * number)) ||(index < (perPage * (number - 1)))) {
           return <Card key={"beer " + index} beer={beer} hidden={true} />
         } else {
           return <Card key={"beer " + index} beer={beer} hidden={false} onClick={showPopOut} />
