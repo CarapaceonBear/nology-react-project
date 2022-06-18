@@ -27,6 +27,8 @@
     // left: ($nav-bar-width / 2);
     background-color: $card-color;
     border-radius: 1rem;
+    font-family: $copy-font;
+    font-weight: $copy-weight-mid;
 
     display: flex;
     flex-direction: column;
@@ -35,6 +37,20 @@
 
     animation: 0.4s cubic-bezier(0, -0.3, 1, 0.9) 0s 1 jumpUp;
 
+    &__cross {
+        align-self: flex-end;
+        z-index: 2;
+    }
+
+    &__name {
+        font-family: $title-font;
+        font-weight: $title-weight;
+        font-size: 2rem;
+        margin: -2.04rem -2rem 0.8rem -2rem;
+        padding: 1rem 0;
+        background-color: $area-color2;
+        border-radius: 1rem 1rem 0 0;
+    }
 
     &__top {
         display: flex;
@@ -52,9 +68,25 @@
             gap: 1rem;
         }
 
-
-    &__cross {
-        align-self: flex-end;
+    &__tagline {
+        font-size: 1.4rem;
+        margin-bottom: 0;
+        background-color: $hover-color;
+        padding-top: 0.8rem;
+        margin: 0.8rem -2rem 0 -2rem;
     }
+
+    &__bottom {
+        background-color: $hover-color;
+        margin: 0 -2rem -2rem -2rem;
+        padding: 0 2rem 1rem 2rem;
+        border-radius: 0 0 1rem 1rem;
+    }
+        &__subheading {
+            font-family: $title-font;
+        }
+
+
+
 
 }

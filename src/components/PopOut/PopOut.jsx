@@ -5,14 +5,6 @@ const PopOut = ({beer, onClick}) => {
 
   if (beer != null) {
     const {name, image_url, tagline, first_brewed, description, abv, ph, food_pairing, brewers_tips} = beer;
-    
-    // const food_pairs = food_pairing.map((item, index) => {
-    //         if (index == 0) {
-    //             return {item};
-    //         } else {
-    //             return " , {item}"
-    //         }
-    //     }
 
     return (
       <>
@@ -32,10 +24,12 @@ const PopOut = ({beer, onClick}) => {
             <section className="pop-out__bottom">
                 <div className="pop-out__description">
                     <p className="pop-out__copy">{description}</p>
-                    <p className="pop-out__copy">{brewers_tips}</p>
+                    {/* <p className="pop-out__subheading">Brewer's Tips</p> */}
+                    {/* <p className="pop-out__copy">{brewers_tips}</p> */}
                 </div>
                 <div className="pop-out__pairing-list">
-                    <p className="pop-out__copy">{food_pairing}</p>
+                    <p className="pop-out__subheading">Food Pairings</p>
+                    <p className="pop-out__copy">{food_pairing.join("; ")}</p>
                 </div>
             </section>
         </div>
