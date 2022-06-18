@@ -16,3 +16,14 @@
     font-weight: $copy-weight-mid;
     font-size: 1.2rem;
 }
+
+@media screen and (max-width: 500px) {
+    .nav-bar {
+        align-items: center;
+        gap: 1rem;
+        width: auto;
+        min-height: 0;
+
+        font-size: 1rem;
+    }
+  }

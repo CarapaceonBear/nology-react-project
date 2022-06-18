@@ -21,8 +21,8 @@
         height: 32px;
         margin: 20px 0;
         &--small {
-            margin: 20px 0;
             height: 32px;
+            margin: 20px 0;
             font-size: 16px;
         }
     }
@@ -58,3 +58,45 @@
 .hidden {
     display: none;
 }
+
+@media screen and (max-width: 500px) {
+    .card {
+        width: 120px;
+        height: 200px;
+        border-radius: 0.5rem;
+        &:hover {
+            width: 120px;
+            height: 200px;
+        }
+        &:hover .card__button {
+            width: 120px;
+            height: 200px;
+        }
+
+        &__name {
+            height: 1rem;
+            margin: 0.5rem 0;
+            font-size: 16px;
+            &--small {
+                height: 1rem;
+                margin: 0.5rem 0;
+                font-size: 8px;
+            }
+        }
+    
+        &__image {
+            margin-top: 0.5rem;
+            max-height: 140px;
+        }
+    
+        &__tagline {
+            display: none;
+        }
+    
+        &__button {
+            width: 120px;
+            height: 200px;
+            border-radius: 0.5rem;
+        }
+    }
+  }

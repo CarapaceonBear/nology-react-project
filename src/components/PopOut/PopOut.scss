@@ -85,8 +85,23 @@
         &__subheading {
             font-family: $title-font;
         }
-
-
-
-
 }
+
+@media screen and (max-width: 500px) {
+    .pop-out {
+      width: 250px;
+
+      &__top {
+        gap: 2rem;
+    }
+        &__image {
+            max-height: 250px;
+        }
+        &__stats {
+            gap: 0.4rem;
+        }
+        &__stat-text {
+            margin: 8px;
+        }
+    }
+  }

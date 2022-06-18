@@ -9,3 +9,10 @@
     padding: 1rem;
     max-width: 1500px;
 }
+
+@media screen and (max-width: 500px) {
+    .card-list {
+        gap: 0.5rem;
+        justify-content: space-evenly;
+    }
+  }

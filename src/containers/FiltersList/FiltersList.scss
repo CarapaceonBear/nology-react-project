@@ -8,3 +8,10 @@
     gap: 1rem;
     width: 100%;
 }
+
+@media screen and (max-width: 500px) {
+    .filters-list {
+        gap: 0.5rem;
+        width: 60%;
+    }
+  }
