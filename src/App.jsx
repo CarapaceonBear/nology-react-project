@@ -11,8 +11,6 @@ function App() {
   const [trigger, setTrigger] = useState("start")
 
   useEffect(() => {
-    console.log("api call");
-    console.log(trigger);
     getBeers(filters).then(items => setBeersArray(items))
   }, [trigger]);
 

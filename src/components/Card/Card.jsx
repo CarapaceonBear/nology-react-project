@@ -20,7 +20,7 @@ const Card = ({beer, hidden, onClick}) => {
   };
 
   return (
-    <div className={hiddenClass} >
+    <div className={hiddenClass} data-testid="card-id">
       <h2 className={nameClass} >{name}</h2>
       <img className="card__image" src={image_url} alt={name} />
       <p className={taglineClass}>{tagline}</p>
