@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nology-react-project/static/css/main.0eb99171.css",
+    "main.js": "/nology-react-project/static/js/main.2ddcfd62.js",
+    "static/js/787.fb00d582.chunk.js": "/nology-react-project/static/js/787.fb00d582.chunk.js",
+    "index.html": "/nology-react-project/index.html",
+    "main.0eb99171.css.map": "/nology-react-project/static/css/main.0eb99171.css.map",
+    "main.2ddcfd62.js.map": "/nology-react-project/static/js/main.2ddcfd62.js.map",
+    "787.fb00d582.chunk.js.map": "/nology-react-project/static/js/787.fb00d582.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0eb99171.css",
+    "static/js/main.2ddcfd62.js"
+  ]
+}
