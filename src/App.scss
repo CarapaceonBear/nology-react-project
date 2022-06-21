@@ -2,6 +2,16 @@
 
 .App {
   text-align: center;
+
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .App {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 

@@ -1,1 +1,103 @@
 @use "../../assets/scss/variables" as *;
+
+.card {
+    width: 250px;
+    height: 430px;
+    background-color: $card-color;
+    border-radius: 1rem;
+    position: relative;
+
+    transition: height 0.2s, width 0.2s, margin 0.2s;
+    &:hover {
+        height: 435px;
+        width: 255px;
+        margin: -2px 0 -3px 0;
+    }
+    &:hover .card__button {
+        height: 435px;
+        width: 255px;
+    }
+
+    &__name {
+        height: 32px;
+        margin: 20px 0;
+        &--small {
+            height: 32px;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+    }
+
+    &__image {
+        // margin-top: 1rem;
+        max-height: 280px;
+    }
+
+    &__tagline {
+        &--small {
+            font-size: 14px;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        width: 250px;
+        height: 430px;
+        bottom: 0;
+        right: 0;
+        border-radius: 1rem;
+        border: none;
+        background-color: #00000000;
+        transition: height 0.2s, width 0.2s, background-color 0.4s;
+
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        width: 120px;
+        height: 200px;
+        border-radius: 0.5rem;
+        &:hover {
+            width: 120px;
+            height: 200px;
+        }
+        &:hover .card__button {
+            width: 120px;
+            height: 200px;
+        }
+
+        &__name {
+            height: 1rem;
+            margin: 0.5rem 0;
+            font-size: 16px;
+            &--small {
+                height: 1rem;
+                margin: 0.5rem 0;
+                font-size: 8px;
+            }
+        }
+    
+        &__image {
+            margin-top: 0.5rem;
+            max-height: 140px;
+        }
+    
+        &__tagline {
+            display: none;
+        }
+    
+        &__button {
+            width: 120px;
+            height: 200px;
+            border-radius: 0.5rem;
+        }
+    }
+  }

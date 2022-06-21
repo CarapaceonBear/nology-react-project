@@ -1,1 +1,48 @@
 @use "../../assets/scss/variables" as *;
+
+@keyframes expandLogo {
+    0% {
+        transform: scaleX(100%);
+    }
+    50% {
+        transform: scaleX(90%);
+    }
+    85% {
+        transform: scaleX(108%);
+    }
+    100% {
+        transform: scaleX(100%);
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80vw;
+
+    &__image {
+        height: 160px;
+        width: 160px;
+        margin-bottom: 0px;
+        transition: height 0.2s, width 0.2s, margin-bottom 0.2s;
+        &:hover {
+
+            animation: 0.2s linear expandLogo;
+
+            height: 165px;
+            width: 165px;
+            margin-bottom: -5px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main {
+        min-width: 90vw;
+
+        &__image {
+            display: none;
+        }
+    }
+  }

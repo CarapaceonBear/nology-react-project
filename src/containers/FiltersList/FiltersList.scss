@@ -1,1 +1,17 @@
 @use "../../assets/scss/variables" as *;
+
+.filters-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    .filters-list {
+        gap: 0.5rem;
+        width: 60%;
+    }
+  }

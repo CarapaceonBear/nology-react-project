@@ -1,1 +1,29 @@
 @use "../../assets/scss/variables" as *;
+
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1rem;
+    width: $nav-bar-width;
+    min-height: 100vh;
+
+    background-color: $splash-color;
+    color: $background-color;
+    font-family: $copy-font;
+    font-weight: $copy-weight-mid;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 500px) {
+    .nav-bar {
+        align-items: center;
+        gap: 1rem;
+        width: auto;
+        min-height: 0;
+
+        font-size: 1rem;
+    }
+  }
