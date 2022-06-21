@@ -1,5 +1,7 @@
 # Nology Assignment - React App
 
+[Github Pages deployment](https://carapaceonbear.github.io/nology-react-project/)
+
 ## Project Specs
 
 Build a website using REACT.<br>
