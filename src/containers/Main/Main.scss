@@ -28,7 +28,7 @@
         transition: height 0.2s, width 0.2s, margin-bottom 0.2s;
         &:hover {
 
-            animation: 0.2s linear 0s expandLogo;
+            animation: 0.2s linear expandLogo;
 
             height: 165px;
             width: 165px;

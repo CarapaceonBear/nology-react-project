@@ -23,7 +23,9 @@ const Main = ({beersArray, filterAcidic, searchTerm}) => {
 
   return (
     <div className="main">
-      <img className="main__image" src={logo} alt="brewdog" />
+      <a href="https://www.brewdog.com/uk">
+        <img className="main__image" src={logo} alt="brewdog" />
+      </a>
       <PageNav number={pageNumber} buttonClick={buttonClick} />
       <CardList beersArray={beersArray} filterAcidic={filterAcidic} searchTerm={searchTerm} number={pageNumber} />
     </div>
